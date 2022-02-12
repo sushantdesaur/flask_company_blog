@@ -11,7 +11,7 @@ def load_user(user_id):
 class User(db.Model, UserMixin):
     __tablename__ = 'users' 
     id = db.column(db.Integer, primary_key= True) 
-    profile_image = db.column(db.String(64), nullable=False,default='default_profile.png' )
+    profile_image = db.column(db.String(64), nullable=False, default='default_profile.png' )
     email =  db.column(db.string(64), unique=True, index=True)
     username = db.column(db.string(64), unique=True, index=True)
     password_hash = db.column(db.string(128))
